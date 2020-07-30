@@ -4,5 +4,14 @@
 import PackageDescription
 
 let package = Package(
-  name: "TransitionButton"
+  name: "TransitionButton",
+  platforms: [.iOS(.v12)],
+  products : [
+    .library(
+      name: "TransitionButton",
+      targets: ["TransitionButton"])
+  ],
+  targets: [
+    .target(name: "TransitionButton", path: "Source", exclude: ["Info.plist"])
+  ]
 )
